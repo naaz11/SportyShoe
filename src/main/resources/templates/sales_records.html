@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Sales Records</title>
+
+</head>
+<body>
+	<div class="container">	
+	<h3>Sales Records</h3>
+	<hr/>
+		<table class="table table-bordered table-striped">
+			<thead>
+				<tr>
+					<th>Category</th>
+					<th>Sale Date</th>
+					<th>Product Name</th>
+					<th>Purchaser</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="sale: ${sales}">
+					<td th:text="${sale.category}" />
+					<td th:text="${sale.saledate}" />
+					<td th:text="${sale.shoe_name}"/>
+					<td th:text="${sale.user_name}" />
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

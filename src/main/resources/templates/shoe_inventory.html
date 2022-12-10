@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Shoe Inventory</title>
+
+</head>
+<body>
+	<div class="container">	
+	<h3>Shoe Inventory</h3>
+	<hr/>
+		<table class="table table-bordered table-striped">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Product Name</th>
+					<th>Price</th>
+					<th>Category</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="shoe: ${shoes}">
+					<td th:text="${shoe.id}" />
+					<td th:text="${shoe.product_name}" />
+					<td th:text="${shoe.price}"/>
+					<td th:text="${shoe.category}" />
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
